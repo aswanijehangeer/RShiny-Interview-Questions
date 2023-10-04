@@ -22,13 +22,13 @@ To access the RShiny interview questions, you can:
 
 - Browse the questions in the repository directly.
 - Clone the repository to your local machine using the following command:
-- Explore the questions online by visiting [RShiny Interview Questions](https://github.com/your_username/rshiny-interview-questions) on GitHub.
+- Explore the questions online by visiting [RShiny Interview Questions](https://github.com/your_aswanijehangeer/rshiny-interview-questions) on GitHub.
 
-Feel free to contribute by suggesting new questions, improvements, or corrections. Please refer to the [Contributing](#contributing) section for more details.
+Feel free to contribute by suggesting new questions, improvements, or corrections. 
 
 ## Contributing
 
-Your contributions are welcome! If you'd like to contribute to this project, please follow these guidelines:
+Your contributions are welcome. If you'd like to contribute to this project, please follow these guidelines:
 
 1. Fork the repository and create a new branch.
 2. Add or modify questions as needed.
