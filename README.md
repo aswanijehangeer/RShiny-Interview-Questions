@@ -1,6 +1,6 @@
 # RShiny Interview Questions
 
-Welcome to the RShiny Interview Questions repository! This repository is a collection of interview questions related to RShiny, a popular R package for building interactive web applications.
+Welcome to the RShiny Interview Questions repository. This repository is a collection of interview questions related to RShiny, a popular R package for building interactive web applications.
 
 ## Table of Contents
 
