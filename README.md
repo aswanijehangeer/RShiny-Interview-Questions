@@ -14,18 +14,16 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
 ## Table of Contents
 
-| No. | Questions                                                                                                   |
-| --- | ----------------------------------------------------------------------------------------------------------- |
-| 1   | [What is R Shiny?](#What-is-R-Shiny?)                                                                       |
-| 2   | [What are the benefits of using RShiny?](#what-is-a-prototype-chain)                                        |
-| 3   | [What is the basic structure of R Shiny Applicaton?](#what-is-the-difference-between-call-apply-and-bind)   |
-| 4   | [What is the difference between ui and server functions in Shiny?](#what-is-json-and-its-common-operations) |
-| 5   | [What is reactive expression in the context of R Shiny?](#what-is-the-purpose-of-the-array-slice-method)    |
-| 6   | [What is the purpose of the array splice method](#what-is-the-purpose-of-the-array-splice-method)           |
-| 7   | [What is the difference between slice and splice](#what-is-the-difference-between-slice-and-splice)         |
-| 8   | [How do you compare an Object with a Map](#how-do-you-compare-object-and-map)                               |
-| 9   | [What is the difference between == and === operators](#what-is-the-difference-between--and--operators)      |
-| 10  | [What are lambda or arrow functions](#what-are-lambda-or-arrow-functions)                                   |
+- [What is R Shiny?](#what-is-rshiny)
+- [What are the benefits of using RShiny?](#what-are-the-benefits-of-using-rshiny)
+- [What is the basic structure of R Shiny Application?](#what-is-the-basic-structure-of-r-shiny-application)
+- [What is the difference between ui and server functions in Shiny?](#what-is-the-difference-between-ui-and-server-functions-in-shiny)
+- [What is reactive expression in the context of R Shiny?](#what-is-reactive-expression-in-the-context-of-r-shiny)
+- [How to create a reactive expression in Shiny?](#how-to-create-a-reactive-expression-in-shiny)
+- [What is the purpose of the render() function in Shiny?](#what-is-the-purpose-of-the-render-function-in-shiny)
+- [What is the purpose of the observe() function in Shiny?](#what-is-the-purpose-of-the-observe-function-in-shiny)
+- [How do we pass data from the UI to the server in Shiny?](#how-do-we-pass-data-from-the-ui-to-the-server-in-shiny)
+- [How to pass data from the server to the UI in Shiny?](#how-to-pass-data-from-the-server-to-the-ui-in-shiny) |
 
 1. ### What is RShiny?
 
@@ -33,7 +31,7 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
    It's designed to create interactive, web-based dashboards, data visualizations, and interactive web applications without requiring extensive knowledge of web development languages such as HTML, CSS, or JavaScript.
 
-   It was announced by Joe Cheng, CTO of RStudio, in 2012.
+   It was announced by Joe Cheng, CTO of Pozit (formerly RStudio), in 2012.
 
 2. ### What are the benefits of using RShiny?
 
@@ -70,7 +68,57 @@ Feel free to contribute by suggesting new questions, improvements, or correction
    avg <- reactive({
     (x + y) / 2
    })
+
+   avg()
    ```
+
+7. ### What is the purpose of the `render()` function in Shiny?
+
+   The `render()` function in Shiny is used to render the user interface of an app. To render a widget, we can use the render() function and pass it the widget as an argument.
+
+   For example, the following code renders a text output widget that displays the value of the avg reactive expression:
+
+   ```R
+   renderText({
+     avg()
+   })
+   ```
+
+8. ### What is the purpose of the observe() function in Shiny?
+
+   The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
+
+   To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
+
+   For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
+
+   ```R
+   observe ({
+
+   print(avg())
+
+   })
+   ```
+
+9. ### How do we pass data from the UI to the server in Shiny?
+
+   To pass data from the UI to the server in Shiny, we can use the `input$` object. The `input$` object contains a list of all of the input values in the UI.
+
+   For example, the following code gets the value of the x input widget and assigns it to the x variable in the server:
+
+   ```R
+   x <- input$x
+   ```
+
+10. ### How to pass data from the server to the UI in Shiny?
+
+    To pass data from the server to the UI in Shiny, we can use the `output$` object. The `output$` object contains a list of all of the output widgets in the UI.
+
+    For example, the following code assigns the value of the avg reactive expression to the `avg_output` output widget:
+
+    ```R
+    output$avg_output <- avg()
+    ```
 
 ## Contributing
 
