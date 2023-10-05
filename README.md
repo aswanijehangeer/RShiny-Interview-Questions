@@ -62,7 +62,15 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
    In Shiny, reactive expressions are used to create reactive values that can be used to update the output of a Shiny app in response to user input or other events.
 
-6. ###
+6. ### How to create a reactive expression in Shiny?
+
+   A reactive expression is a function that evaluates to a value and then updates its value whenever any of its dependencies change. To create a reactive expression in Shiny, you can use the `reactive()` function.
+
+   ```R
+   avg <- reactive({
+    (x + y) / 2
+   })
+   ```
 
 ## Contributing
 
