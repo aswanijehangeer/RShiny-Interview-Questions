@@ -6,24 +6,26 @@ This repository is a collection of interview questions related to RShiny, a popu
 
 ## About RShiny Interview Questions
 
-This repository contains a curated list of RShiny interview questions. The questions cover various aspects of RShiny, including concepts, best practices, and practical examples. Whether you're preparing for an interview or looking to expand your knowledge of RShiny, this collection will prove valuable.
+This repository contains a curated list of RShiny interview questions.
+
+The questions cover various aspects of RShiny, including concepts, best practices, and practical examples. Whether you're preparing for an interview or looking to expand your knowledge of RShiny, this collection will prove valuable.
 
 Feel free to contribute by suggesting new questions, improvements, or corrections.
 
 ## Table of Contents
 
-| No. | Questions                                                                                                  |
-| --- | ---------------------------------------------------------------------------------------------------------- |
-| 1   | [What is R Shiny?](#What-is-R-Shiny?)                                                                      |
-| 2   | [What is a prototype chain](#what-is-a-prototype-chain)                                                    |
-| 3   | [What is the difference between Call, Apply and Bind](#what-is-the-difference-between-call-apply-and-bind) |
-| 4   | [What is JSON and its common operations](#what-is-json-and-its-common-operations)                          |
-| 5   | [What is the purpose of the array slice method](#what-is-the-purpose-of-the-array-slice-method)            |
-| 6   | [What is the purpose of the array splice method](#what-is-the-purpose-of-the-array-splice-method)          |
-| 7   | [What is the difference between slice and splice](#what-is-the-difference-between-slice-and-splice)        |
-| 8   | [How do you compare an Object with a Map](#how-do-you-compare-object-and-map)                              |
-| 9   | [What is the difference between == and === operators](#what-is-the-difference-between--and--operators)     |
-| 10  | [What are lambda or arrow functions](#what-are-lambda-or-arrow-functions)                                  |
+| No. | Questions                                                                                                   |
+| --- | ----------------------------------------------------------------------------------------------------------- |
+| 1   | [What is R Shiny?](#What-is-R-Shiny?)                                                                       |
+| 2   | [What are the benefits of using RShiny?](#what-is-a-prototype-chain)                                        |
+| 3   | [What is the basic structure of R Shiny Applicaton?](#what-is-the-difference-between-call-apply-and-bind)   |
+| 4   | [What is the difference between ui and server functions in Shiny?](#what-is-json-and-its-common-operations) |
+| 5   | [What is reactive expression in the context of R Shiny?](#what-is-the-purpose-of-the-array-slice-method)    |
+| 6   | [What is the purpose of the array splice method](#what-is-the-purpose-of-the-array-splice-method)           |
+| 7   | [What is the difference between slice and splice](#what-is-the-difference-between-slice-and-splice)         |
+| 8   | [How do you compare an Object with a Map](#how-do-you-compare-object-and-map)                               |
+| 9   | [What is the difference between == and === operators](#what-is-the-difference-between--and--operators)      |
+| 10  | [What are lambda or arrow functions](#what-are-lambda-or-arrow-functions)                                   |
 
 1. ### What is RShiny?
 
