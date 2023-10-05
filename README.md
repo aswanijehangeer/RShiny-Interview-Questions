@@ -22,7 +22,7 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 - [How to create a reactive expression in Shiny?](#how-to-create-a-reactive-expression-in-shiny)
 - [What is the purpose of the render() function in Shiny?](#what-is-the-purpose-of-the-render-function-in-shiny)
 - [What is the purpose of the observe() function in Shiny?](#what-is-the-purpose-of-the-observe-function-in-shiny)
-- [How do we pass data from the UI to the server in Shiny?](#how-do-we-pass-data-from-the-ui-to-the-server-in-shiny)
+- [How to pass data from the UI to the server in Shiny?](#how-do-we-pass-data-from-the-ui-to-the-server-in-shiny)
 - [How to pass data from the server to the UI in Shiny?](#how-to-pass-data-from-the-server-to-the-ui-in-shiny)
 
 1. ### What is RShiny?
