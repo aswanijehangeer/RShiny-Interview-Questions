@@ -172,7 +172,78 @@ x <- input$x
 
 16. ### Explain how to use the reactiveValues() function in Shiny.
 
+    The `reactiveValues()` function in Shiny is used to create a list-like object that can hold multiple reactive values. This allows for the management of mutable state within a Shiny application and enables reactivity based on the changes in these values.
+
+    **Example**:
+
+    Suppose you want to create a counter that increments when a button is clicked. `reactiveValues()` can be used to manage the counter.
+
+    ```R
+      library(shiny)
+
+      ui <- fluidPage(
+      actionButton("incrementBtn", "Increment Counter"),
+      verbatimTextOutput("counterOutput")
+      )
+
+      server <- function(input, output) {
+      # Initialize a reactiveValues object to store the counter
+      counterValues <- reactiveValues(counter = 0)
+
+      observeEvent(input$incrementBtn, {
+         # Increment the counter when the button is clicked
+         counterValues$counter <- counterValues$counter + 1
+         })
+
+      output$counterOutput <- renderPrint({
+         paste("Counter value:", counterValues$counter)
+         })
+      }
+
+      shinyApp(ui, server)
+    ```
+
+    In this example, every time the "Increment Counter" button is clicked, the counter value is updated and displayed.
+
 17. ### What is the purpose of the eventReactive() function in Shiny?
+
+    The `eventReactive()` function in Shiny is used to create a reactive expression that only responds to a specific event. It is particularly useful when you want to trigger reactivity based on an event, such as a button click.
+
+    **Example**:
+
+    Suppose you want to allow the user to input a number and calculate its square only when a button is clicked. `eventReactive()` can be used to achieve this.
+
+    ```R
+    library(shiny)
+
+      ui <- fluidPage(
+      numericInput("numberInput", "Enter a number:", value = 0),
+      actionButton("calculateBtn", "Calculate Square"),
+      verbatimTextOutput("squareOutput")
+      )
+
+      server <- function(input, output) {
+      calculateSquare <- eventReactive(input$calculateBtn, {
+         # Calculate the square when the button is clicked
+         input$numberInput^2
+      })
+
+      # Display the square value
+      output$squareOutput <- renderPrint({
+         paste("Square:", calculateSquare())
+      })
+      }
+
+      shinyApp(ui, server)
+    ```
+
+    In this example, the square of the input number is calculated and displayed only when the "Calculate Square" button is clicked.
+
+18. ###
+
+19. ###
+
+20. ###
 
 ## Contributing
 
