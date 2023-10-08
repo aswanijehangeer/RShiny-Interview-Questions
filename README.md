@@ -1,4 +1,4 @@
-#### Working... I will add the questions with answers on daily basis.
+\*#### Working... I will add the questions with answers on daily basis.
 
 # RShiny Interview Questions and Answers
 
@@ -53,14 +53,18 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
    The UI sets up the visual structure, while the server controls the dynamic functionality, enabling a seamless interactive experience for users.
 
-5. ### What is reactive expression in the context of R Shiny?
+5. ### What is reactivity in R Shiny?
+
+   Reactivity in R Shiny refers to the ability of a Shiny app to automatically update outputs (e.g., plots, tables) based on changes in inputs, reactive expressions, or other reactive values. It ensures that the app stays responsive and reflects the most current state based on user actions.
+
+6. ### What is reactive expression in the context of R Shiny?
 
    A reactive expression is an expression that returns a value that can change over time in response to user input or other events.
    Reactive expressions are used to create reactive values, which are values that can change over time.
 
    In Shiny, reactive expressions are used to create reactive values that can be used to update the output of a Shiny app in response to user input or other events.
 
-6. ### How to create a reactive expression in Shiny?
+7. ### How to create a reactive expression in Shiny?
 
    A reactive expression is a function that evaluates to a value and then updates its value whenever any of its dependencies change. To create a reactive expression in Shiny, you can use the `reactive()` function.
 
@@ -72,7 +76,7 @@ Feel free to contribute by suggesting new questions, improvements, or correction
    avg()
    ```
 
-7. ### What is the purpose of the `render()` function in Shiny?
+8. ### What is the purpose of the `render()` function in Shiny?
 
    The `render()` function in Shiny is used to render the user interface of an app. To render a widget, we can use the render() function and pass it the widget as an argument.
 
@@ -84,33 +88,33 @@ Feel free to contribute by suggesting new questions, improvements, or correction
    })
    ```
 
-8. ### What is the purpose of the observe() function in Shiny?
+9. ### What is the purpose of the observe() function in Shiny?
 
-   The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
+The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
 
-   To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
+To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
 
-   For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
+For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
 
-   ```R
-   observe ({
+```R
+observe ({
 
-   print(avg())
+print(avg())
 
-   })
-   ```
+})
+```
 
-9. ### How do we pass data from the UI to the server in Shiny?
+10. ### How do we pass data from the UI to the server in R Shiny?
 
-   To pass data from the UI to the server in Shiny, we can use the `input$` object. The `input$` object contains a list of all of the input values in the UI.
+To pass data from the UI to the server in Shiny, we can use the `input$` object. The `input$` object contains a list of all of the input values in the UI.
 
-   For example, the following code gets the value of the x input widget and assigns it to the x variable in the server:
+For example, the following code gets the value of the x input widget and assigns it to the x variable in the server:
 
-   ```R
-   x <- input$x
-   ```
+```R
+x <- input$x
+```
 
-10. ### How to pass data from the server to the UI in Shiny?
+11. ### How to pass data from the server to the UI in R Shiny?
 
     To pass data from the server to the UI in Shiny, we can use the `output$` object. The `output$` object contains a list of all of the output widgets in the UI.
 
@@ -119,6 +123,56 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     ```R
     output$avg_output <- avg()
     ```
+
+12. ### What is the concept of reactive graph in R Shiny?
+
+    A reactive graph in R Shiny is a visual representation of how various reactive components (reactive expressions, reactive values) are connected and depend on each other.
+    It helps in understanding the flow of reactivity within the application, aiding in optimizing and debugging the app's performance.
+
+13. ### How does Shiny handle reactivity behind the scenes?
+
+    Shiny uses a dependency-tracking system to manage reactivity. When a reactive expression is created, Shiny identifies its dependencies.
+
+    Whenever any of these dependencies change, Shiny automatically re-executes the reactive expression, updating the outputs that depend on it accordingly.
+    This ensures that the app stays up to date with the latest values and user interactions.
+
+14. ### What is the difference between `reactive()` and `reactiveVal()` in R Shiny?
+
+    `reactive()` is used to create a reactive expression that evaluates to a value and automatically updates whenever its dependencies change.
+
+    `reactiveVal()` is used to create a reactive object that holds a single value and can be read or modified reactively. It's useful for managing state and reactivity within the Shiny application.
+
+15. ### What is the purpose of the observeEvent() function in Shiny?
+
+    The `observeEvent()` function in Shiny is used to observe events and trigger actions based on those events, such as button clicks or input changes. It allows you to define reactive behavior in response to specific events within the application.
+
+    **Example:**  
+     Suppose you want to display an alert when a button is clicked. You can use `observeEvent()` to observe the button click and trigger the alert.
+
+```R
+      library(shiny)
+
+      ui <- fluidPage(
+      actionButton("btn", "Click me"),
+      verbatimTextOutput("alertOutput")
+      )
+
+      server <- function(input, output) {
+      observeEvent(input$btn, {
+         output$alertOutput <- renderPrint({
+            "Button clicked! Displaying alert."
+         })
+      })
+      }
+
+      shinyApp(ui, server)
+```
+
+      In this example, when the button is clicked, the text "Button clicked! Displaying alert." will be displayed.
+
+16. ### Explain how to use the reactiveValues() function in Shiny.
+
+17. ### What is the purpose of the eventReactive() function in Shiny?
 
 ## Contributing
 
