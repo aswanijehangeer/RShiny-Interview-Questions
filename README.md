@@ -1,4 +1,4 @@
-\*#### Working... I will add the questions with answers on daily basis.
+#### Working... I will add the questions with answers regularly.
 
 # RShiny Interview Questions and Answers
 
