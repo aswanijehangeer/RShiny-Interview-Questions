@@ -184,26 +184,26 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     Suppose you want to create a counter that increments when a button is clicked. `reactiveValues()` can be used to manage the counter.
 
     ```R
-      library(shiny)
+    library(shiny)
 
-      ui <- fluidPage(
-      actionButton("incrementBtn", "Increment Counter"),
-      verbatimTextOutput("counterOutput")
-      )
+       ui <- fluidPage(
+       actionButton("incrementBtn", "Increment Counter"),
+       verbatimTextOutput("counterOutput")
+       )
 
-      server <- function(input, output) {
-      # Initialize a reactiveValues object to store the counter
-      counterValues <- reactiveValues(counter = 0)
+       server <- function(input, output) {
+       # Initialize a reactiveValues object to store the counter
+       counterValues <- reactiveValues(counter = 0)
 
-      observeEvent(input$incrementBtn, {
-         # Increment the counter when the button is clicked
-         counterValues$counter <- counterValues$counter + 1
-         })
+       observeEvent(input$incrementBtn, {
+          # Increment the counter when the button is clicked
+          counterValues$counter <- counterValues$counter + 1
+          })
 
-      output$counterOutput <- renderPrint({
-         paste("Counter value:", counterValues$counter)
-         })
-      }
+       output$counterOutput <- renderPrint({
+          paste("Counter value:", counterValues$counter)
+          })
+       }
 
       shinyApp(ui, server)
     ```
