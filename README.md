@@ -14,7 +14,7 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
 ## Table of Contents
 
-- [What is R Shiny?](#what-is-r-shiny)
+- [What is R Shiny?](#what-is-R-shiny)
 - [What are the benefits of using R Shiny?](#what-are-the-benefits-of-using-r-shiny)
 - [What is the basic structure of R Shiny Application?](#what-is-the-basic-structure-of-an-r-shiny-application)
 - [What is the difference between ui and server functions in Shiny?](#what-is-the-difference-between-the-ui-and-server-functions-in-shiny)
