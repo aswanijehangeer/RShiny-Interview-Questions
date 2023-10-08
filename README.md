@@ -154,26 +154,26 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     **Example:**  
      Suppose you want to display an alert when a button is clicked. You can use `observeEvent()` to observe the button click and trigger the alert.
 
-```R
-      library(shiny)
+    ```R
+          library(shiny)
 
-      ui <- fluidPage(
-      actionButton("btn", "Click me"),
-      verbatimTextOutput("alertOutput")
-      )
+          ui <- fluidPage(
+          actionButton("btn", "Click me"),
+          verbatimTextOutput("alertOutput")
+          )
 
-      server <- function(input, output) {
-      observeEvent(input$btn, {
-         output$alertOutput <- renderPrint({
-            "Button clicked! Displaying alert."
-         })
-      })
-      }
+          server <- function(input, output) {
+          observeEvent(input$btn, {
+             output$alertOutput <- renderPrint({
+                "Button clicked! Displaying alert."
+             })
+          })
+          }
 
-      shinyApp(ui, server)
-```
+          shinyApp(ui, server)
+    ```
 
-      In this example, when the button is clicked, the text "Button clicked! Displaying alert." will be displayed.
+    In this example, when the button is clicked, the text "Button clicked! Displaying alert." will be displayed.
 
 16. ### Explain how to use the reactiveValues() function in Shiny.
 
