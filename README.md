@@ -24,6 +24,11 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 - [What is the purpose of the observe() function in Shiny?](#what-is-the-purpose-of-the-observe-function-in-shiny)
 - [How to pass data from the UI to the server in Shiny?](#how-do-we-pass-data-from-the-ui-to-the-server-in-shiny)
 - [How to pass data from the server to the UI in Shiny?](#how-to-pass-data-from-the-server-to-the-ui-in-shiny)
+- [What is the concept of a reactive graph in R Shiny?](#what-is-the-concept-of-reactive-graph-in-r-shiny)
+- [How does Shiny handle reactivity behind the scenes?](#how-does-shiny-handle-reactivity-behind-the-scenes)
+- [What is the difference between `reactive()` and `reactiveVal()` in R Shiny?](#what-is-the-difference-between-reactive-and-reactiveVal-in-r-shiny)
+- [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-observeEvent-in-shiny)
+- [Explain how to use the reactiveValues() function in Shiny.](#explain-how-to-use-reactiveValues-function-in-shiny)
 
 1. ### What is RShiny?
 
@@ -90,29 +95,29 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
 9. ### What is the purpose of the observe() function in Shiny?
 
-The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
+   The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
 
-To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
+   To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
 
-For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
+   For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
 
-```R
-observe ({
+   ```R
+   observe ({
 
-print(avg())
+   print(avg())
 
-})
-```
+   })
+   ```
 
 10. ### How do we pass data from the UI to the server in R Shiny?
 
-To pass data from the UI to the server in Shiny, we can use the `input$` object. The `input$` object contains a list of all of the input values in the UI.
+    To pass data from the UI to the server in Shiny, we can use the `input$` object. The `input$` object contains a list of all of the input values in the UI.
 
-For example, the following code gets the value of the x input widget and assigns it to the x variable in the server:
+    For example, the following code gets the value of the x input widget and assigns it to the x variable in the server:
 
-```R
-x <- input$x
-```
+    ```R
+    x  <- input$x
+    ```
 
 11. ### How to pass data from the server to the UI in R Shiny?
 
