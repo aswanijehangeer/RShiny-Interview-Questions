@@ -14,21 +14,21 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
 ## Table of Contents
 
-- [What is R Shiny?](#what-is-rshiny)
-- [What are the benefits of using RShiny?](#what-are-the-benefits-of-using-rshiny)
-- [What is the basic structure of R Shiny Application?](#what-is-the-basic-structure-of-r-shiny-application)
-- [What is the difference between ui and server functions in Shiny?](#what-is-the-difference-between-ui-and-server-functions-in-shiny)
+- [What is R Shiny?](#what-is-r-shiny)
+- [What are the benefits of using R Shiny?](#what-are-the-benefits-of-using-r-shiny)
+- [What is the basic structure of R Shiny Application?](#what-is-the-basic-structure-of-an-r-shiny-application)
+- [What is the difference between ui and server functions in Shiny?](#what-is-the-difference-between-the-ui-and-server-functions-in-shiny)
 - [What is reactive expression in the context of R Shiny?](#what-is-reactive-expression-in-the-context-of-r-shiny)
 - [How to create a reactive expression in Shiny?](#how-to-create-a-reactive-expression-in-shiny)
 - [What is the purpose of the render() function in Shiny?](#what-is-the-purpose-of-the-render-function-in-shiny)
-- [What is the purpose of the observe() function in Shiny?](#what-is-the-purpose-of-the-observe-function-in-shiny)
-- [How to pass data from the UI to the server in Shiny?](#how-do-we-pass-data-from-the-ui-to-the-server-in-shiny)
+- [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-the-observeevent-function-in-shiny)
+- [How to pass data from the UI to the server in Shiny?](#how-to-pass-data-from-the-ui-to-the-server-in-shiny)
 - [How to pass data from the server to the UI in Shiny?](#how-to-pass-data-from-the-server-to-the-ui-in-shiny)
-- [What is the concept of a reactive graph in R Shiny?](#what-is-the-concept-of-reactive-graph-in-r-shiny)
+- [What is the concept of a reactive graph in R Shiny?](#what-is-the-concept-of-a-reactive-graph-in-r-shiny)
 - [How does Shiny handle reactivity behind the scenes?](#how-does-shiny-handle-reactivity-behind-the-scenes)
-- [What is the difference between `reactive()` and `reactiveVal()` in R Shiny?](#what-is-the-difference-between-reactive-and-reactiveVal-in-r-shiny)
-- [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-observeEvent-in-shiny)
-- [Explain how to use the reactiveValues() function in Shiny.](#explain-how-to-use-reactiveValues-function-in-shiny)
+- [What is the difference between reactive() and reactiveVal() in R Shiny?](#what-is-the-difference-between-reactive-and-reactiveval-in-r-shiny)
+- [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-the-observeevent-function-in-shiny)
+- [Explain how to use the reactiveValues() function in Shiny.](#explain-how-to-use-the-reactivevalues-function-in-shiny)
 
 1. ### What is RShiny?
 
