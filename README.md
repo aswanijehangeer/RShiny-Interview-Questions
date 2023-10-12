@@ -14,21 +14,30 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
 ## Table of Contents
 
-- [What is R Shiny?](#what-is-R-shiny)
+- [What is R Shiny?](#what-is-r-shiny)
 - [What are the benefits of using R Shiny?](#what-are-the-benefits-of-using-r-shiny)
-- [What is the basic structure of R Shiny Application?](#what-is-the-basic-structure-of-an-r-shiny-application)
-- [What is the difference between ui and server functions in Shiny?](#what-is-the-difference-between-the-ui-and-server-functions-in-shiny)
+- [What is the basic structure of R Shiny Application?](#what-is-the-basic-structure-of-r-shiny-application)
+- [What is the difference between ui and server functions in Shiny?](#what-is-the-difference-between-ui-and-server-functions-in-shiny)
+- [What is reactivity in R Shiny?](#what-is-reactivity-in-r-shiny)
 - [What is reactive expression in the context of R Shiny?](#what-is-reactive-expression-in-the-context-of-r-shiny)
 - [How to create a reactive expression in Shiny?](#how-to-create-a-reactive-expression-in-shiny)
 - [What is the purpose of the render() function in Shiny?](#what-is-the-purpose-of-the-render-function-in-shiny)
-- [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-the-observeevent-function-in-shiny)
-- [How to pass data from the UI to the server in Shiny?](#how-to-pass-data-from-the-ui-to-the-server-in-shiny)
-- [How to pass data from the server to the UI in Shiny?](#how-to-pass-data-from-the-server-to-the-ui-in-shiny)
-- [What is the concept of a reactive graph in R Shiny?](#what-is-the-concept-of-a-reactive-graph-in-r-shiny)
+- [What is the purpose of the observe() function in Shiny?](#what-is-the-purpose-of-the-observe-function-in-shiny)
+- [How do we pass data from the UI to the server in R Shiny?](#how-to-pass-data-from-the-ui-to-the-server-in-shiny)
+- [How to pass data from the server to the UI in R Shiny?](#how-to-pass-data-from-the-server-to-the-ui-in-shiny)
+- [What is the concept of reactive graph in R Shiny?](#what-is-the-concept-of-a-reactive-graph-in-r-shiny)
 - [How does Shiny handle reactivity behind the scenes?](#how-does-shiny-handle-reactivity-behind-the-scenes)
 - [What is the difference between reactive() and reactiveVal() in R Shiny?](#what-is-the-difference-between-reactive-and-reactiveval-in-r-shiny)
 - [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-the-observeevent-function-in-shiny)
 - [Explain how to use the reactiveValues() function in Shiny.](#explain-how-to-use-the-reactivevalues-function-in-shiny)
+- [What is the purpose of the eventReactive() function in Shiny?](#what-is-the-purpose-of-the-eventreactive-function-in-shiny)
+- [What is the difference between a reactive expression and a reactive value?](#what-is-the-difference-between-a-reactive-expression-and-a-reactive-value)
+- [How do you use the `renderUI()` function in R Shiny to dynamically generate UI elements based on user input?](#how-do-you-use-the-renderui-function-in-r-shiny-to-dynamically-generate-ui-elements-based-on-user-input)
+- [Explain how to use the `req()` function in R Shiny to validate and halt the reactive computation until certain conditions are met.](#explain-how-to-use-the-req-function-in-r-shiny-to-validate-and-halt-the-reactive-computation-until-certain-conditions-are-met)
+- [How would you implement conditional logic in the UI using the `conditionalPanel()` function in R Shiny?](#how-would-you-implement-conditional-logic-in-the-ui-using-the-conditionalpanel-function-in-r-shiny)
+- [Describe the usage and benefits of the `updateSelectInput()` function in R Shiny.](#describe-the-usage-and-benefits-of-the-updateselectinput-function-in-r-shiny)
+- [How would you use the `validate()` function in R Shiny to perform input validation and display custom error messages?](#how-would-you-use-the-validate-function-in-r-shiny-to-perform-input-validation-and-display-custom-error-messages)
+- [Explain how to use the `updateModal()` function in R Shiny to dynamically update and control modal dialog boxes.](#explain-how-to-use-the-updatemodal-function-in-r-shiny-to-dynamically-update-and-control-modal-dialog-boxes)
 
 1.  ### What is RShiny?
 
