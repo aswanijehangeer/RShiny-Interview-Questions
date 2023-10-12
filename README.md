@@ -30,84 +30,84 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 - [What is the purpose of the observeEvent() function in Shiny?](#what-is-the-purpose-of-the-observeevent-function-in-shiny)
 - [Explain how to use the reactiveValues() function in Shiny.](#explain-how-to-use-the-reactivevalues-function-in-shiny)
 
-1. ### What is RShiny?
+1.  ### What is RShiny?
 
-   RShiny is an open-source web application framework written in R for developing web applications.
+    RShiny is an open-source web application framework written in R for developing web applications.
 
-   It's designed to create interactive, web-based dashboards, data visualizations, and interactive web applications without requiring extensive knowledge of web development languages such as HTML, CSS, or JavaScript.
+    It's designed to create interactive, web-based dashboards, data visualizations, and interactive web applications without requiring extensive knowledge of web development languages such as HTML, CSS, or JavaScript.
 
-   It was announced by Joe Cheng, CTO of Pozit (formerly RStudio), in 2012.
+    It was announced by Joe Cheng, CTO of Pozit (formerly RStudio), in 2012.
 
-2. ### What are the benefits of using RShiny?
+2.  ### What are the benefits of using RShiny?
 
-   It is easy to use, even for users with no prior experience in web development.
+    It is easy to use, even for users with no prior experience in web development.
 
-   It provides a number of built-in features that make it easy to create interactive web applications.
+    It provides a number of built-in features that make it easy to create interactive web applications.
 
-   It is scalable, so you can create Shiny apps of any size or complexity.
+    It is scalable, so you can create Shiny apps of any size or complexity.
 
-   It is open source, so there is a large community of users and developers who can help you if you need assistance.
+    It is open source, so there is a large community of users and developers who can help you if you need assistance.
 
-3. ### What is the basic structure of R Shiny Applicaton?
+3.  ### What is the basic structure of R Shiny Applicaton?
 
-   A Shiny application consists of two main parts: a user interface (UI) and a server. The UI defines the layout and appearance, while the server defines the app's behavior and functionality.
+    A Shiny application consists of two main parts: a user interface (UI) and a server. The UI defines the layout and appearance, while the server defines the app's behavior and functionality.
 
-4. ### What is the difference between ui and server functions in Shiny?
+4.  ### What is the difference between ui and server functions in Shiny?
 
-   The UI function in Shiny constructs the user interface, specifying layout and appearance elements such as inputs, outputs, and formatting. On the other hand, the server function houses the application's logic and reactive behavior, handling input changes, calculations, and dynamic updates of output based on user interactions or other data modifications.
+    The UI function in Shiny constructs the user interface, specifying layout and appearance elements such as inputs, outputs, and formatting. On the other hand, the server function houses the application's logic and reactive behavior, handling input changes, calculations, and dynamic updates of output based on user interactions or other data modifications.
 
-   The UI sets up the visual structure, while the server controls the dynamic functionality, enabling a seamless interactive experience for users.
+    The UI sets up the visual structure, while the server controls the dynamic functionality, enabling a seamless interactive experience for users.
 
-5. ### What is reactivity in R Shiny?
+5.  ### What is reactivity in R Shiny?
 
-   Reactivity in R Shiny refers to the ability of a Shiny app to automatically update outputs (e.g., plots, tables) based on changes in inputs, reactive expressions, or other reactive values. It ensures that the app stays responsive and reflects the most current state based on user actions.
+    Reactivity in R Shiny refers to the ability of a Shiny app to automatically update outputs (e.g., plots, tables) based on changes in inputs, reactive expressions, or other reactive values. It ensures that the app stays responsive and reflects the most current state based on user actions.
 
-6. ### What is reactive expression in the context of R Shiny?
+6.  ### What is reactive expression in the context of R Shiny?
 
-   A reactive expression is an expression that returns a value that can change over time in response to user input or other events.
-   Reactive expressions are used to create reactive values, which are values that can change over time.
+    A reactive expression is an expression that returns a value that can change over time in response to user input or other events.
+    Reactive expressions are used to create reactive values, which are values that can change over time.
 
-   In Shiny, reactive expressions are used to create reactive values that can be used to update the output of a Shiny app in response to user input or other events.
+    In Shiny, reactive expressions are used to create reactive values that can be used to update the output of a Shiny app in response to user input or other events.
 
-7. ### How to create a reactive expression in Shiny?
+7.  ### How to create a reactive expression in Shiny?
 
-   A reactive expression is a function that evaluates to a value and then updates its value whenever any of its dependencies change. To create a reactive expression in Shiny, you can use the `reactive()` function.
+    A reactive expression is a function that evaluates to a value and then updates its value whenever any of its dependencies change. To create a reactive expression in Shiny, you can use the `reactive()` function.
 
-   ```R
-   avg <- reactive({
-    (x + y) / 2
-   })
+    ```R
+    avg <- reactive({
+          (x + y) / 2
+       })
 
-   avg()
-   ```
+    avg()
+    ```
 
-8. ### What is the purpose of the `render()` function in Shiny?
+8.  ### What is the purpose of the `render()` function in Shiny?
 
-   The `render()` function in Shiny is used to render the user interface of an app. To render a widget, we can use the render() function and pass it the widget as an argument.
+    The `render()` function in Shiny is used to render the user interface of an app. To render a widget, we can use the render() function and pass it the widget as an argument.
 
-   For example, the following code renders a text output widget that displays the value of the avg reactive expression:
+    For example, the following code renders a text output widget that displays the value of the avg reactive expression:
 
-   ```R
-   renderText({
-     avg()
-   })
-   ```
+    ```R
+       renderText({
+          avg()
+       })
+    ```
 
-9. ### What is the purpose of the observe() function in Shiny?
+9.  ### What is the purpose of the observe() function in Shiny?
 
-   The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
+    The `observe()` function in Shiny is used to run code whenever a reactive expression updates its value.
 
-   To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
+    To observe a reactive expression, we can use the `observe()` function and pass it the reactive expression as an argument.
 
-   For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
+    For example, the following code observes the avg reactive expression and prints its value to the console whenever it updates:
 
-   ```R
-   observe ({
+    ```R
+       observe ({
 
-   print(avg())
+       print(avg())
 
-   })
-   ```
+       })
+    ```
 
 10. ### How do we pass data from the UI to the server in R Shiny?
 
@@ -116,7 +116,7 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     For example, the following code gets the value of the x input widget and assigns it to the x variable in the server:
 
     ```R
-    x  <- input$x
+      x  <- input$x
     ```
 
 11. ### How to pass data from the server to the UI in R Shiny?
@@ -126,7 +126,7 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     For example, the following code assigns the value of the avg reactive expression to the `avg_output` output widget:
 
     ```R
-    output$avg_output <- avg()
+      output$avg_output <- avg()
     ```
 
 12. ### What is the concept of reactive graph in R Shiny?
@@ -158,12 +158,12 @@ Feel free to contribute by suggesting new questions, improvements, or correction
           library(shiny)
 
           ui <- fluidPage(
-          actionButton("btn", "Click me"),
-          verbatimTextOutput("alertOutput")
+            actionButton("btn", "Click me"),
+            verbatimTextOutput("alertOutput")
           )
 
           server <- function(input, output) {
-          observeEvent(input$btn, {
+            observeEvent(input$btn, {
              output$alertOutput <- renderPrint({
                 "Button clicked! Displaying alert."
              })
@@ -187,15 +187,15 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     library(shiny)
 
        ui <- fluidPage(
-       actionButton("incrementBtn", "Increment Counter"),
-       verbatimTextOutput("counterOutput")
+         actionButton("incrementBtn", "Increment Counter"),
+         verbatimTextOutput("counterOutput")
        )
 
        server <- function(input, output) {
        # Initialize a reactiveValues object to store the counter
-       counterValues <- reactiveValues(counter = 0)
+         counterValues <- reactiveValues(counter = 0)
 
-       observeEvent(input$incrementBtn, {
+         observeEvent(input$incrementBtn, {
           # Increment the counter when the button is clicked
           counterValues$counter <- counterValues$counter + 1
           })
@@ -222,8 +222,8 @@ Feel free to contribute by suggesting new questions, improvements, or correction
     library(shiny)
 
       ui <- fluidPage(
-      numericInput("numberInput", "Enter a number:", value = 0),
-      actionButton("calculateBtn", "Calculate Square"),
+         numericInput("numberInput", "Enter a number:", value = 0),
+         actionButton("calculateBtn", "Calculate Square"),
       verbatimTextOutput("squareOutput")
       )
 
@@ -244,11 +244,161 @@ Feel free to contribute by suggesting new questions, improvements, or correction
 
     In this example, the square of the input number is calculated and displayed only when the "Calculate Square" button is clicked.
 
-18. ###
+18. ### What is the difference between a reactive expression and a reactive value?
 
-19. ###
+    A reactive expression is a function that returns a value, and a reactive value is a variable that can be changed. Reactive expressions are used to calculate values that depend on other reactive values or input values. Reactive values are used to store values that need to be updated when other reactive values or input values change.
 
-20. ###
+19. ### How do you use the `renderUI()` function in R Shiny to dynamically generate UI elements based on user input?
+
+    The `renderUI()` function is used to dynamically generate UI elements in response to user input or other reactive changes.
+
+    Here's a simple example that dynamically creates a plot based on the selected variable from a dropdown menu:
+
+    ```R
+    library(shiny)
+      ui <- fluidPage(
+         selectInput("variable", "Select a variable:",
+                     choices = c("Sepal.Length", "Sepal.Width",
+                     "Petal.Length", "Petal.Width")),
+         uiOutput("plotOutput"))
+
+      server <- function(input, output) {
+       output$plotOutput <- renderUI({
+         plotOutput("plot")
+       })
+
+       output$plot <- renderPlot({
+         data <- iris[, c("Species", input$variable)]
+
+         boxplot(data[[input$variable]] ~ data$Species,
+         main = paste("Boxplot of", input$variable))
+       })
+
+      }
+      shinyApp(ui, server)
+    ```
+
+20. ### Explain how to use the `req()` function in R Shiny to validate and halt the reactive computation until certain conditions are met.
+
+    The `req()` function is used to ensure that certain conditions are met before proceeding with the reactive computation. It halts the computation and displays a message if the conditions are not satisfied.
+
+    Here's an example where we validate if a numeric input is greater than 10:
+
+    ```R
+    library(shiny)
+      ui <- fluidPage(
+            numericInput("number", "Enter a number:", value = 5),
+            verbatimTextOutput("result")
+            )
+
+      server <- function(input, output) {
+         output$result <- renderPrint({
+            req(input$number > 10, "Number must be greater than 10.")
+            print("Valid number!")
+            })
+         }
+      shinyApp(ui, server)
+    ```
+
+21. ### How would you implement conditional logic in the UI using the `conditionalPanel()` function in R Shiny?
+
+    The `conditionalPanel()` function in Shiny allows us to conditionally show or hide UI elements based on a condition.
+
+    Here's a simple example that shows a text input when a checkbox is checked:
+
+    ```R
+      library(shiny)
+         ui <- fluidPage(
+               checkboxInput("showInput", "Show Input"),
+               conditionalPanel(
+               condition = "input.showInput == true",
+               textInput("textInput", "Enter text:")
+               )
+            )
+
+         server <- function(input, output) {
+            # Server logic (not needed for this example)
+            }
+
+      shinyApp(ui, server)
+    ```
+
+22. ### Describe the usage and benefits of the `updateSelectInput()` function in R Shiny.
+
+    The `updateSelectInput()` function in Shiny allows us to dynamically update the choices available in a `selectInput()` element based on user interactions or other reactive changes. This is useful when you want to change the available options in a dropdown menu based on user input.
+
+    Here's a simple example that updates the choices in a dropdown based on a checkbox:
+
+    ```R
+    library(shiny)
+         ui <- fluidPage(
+            checkboxInput("updateChoices", "Update Choices"),
+            selectInput("dynamicSelect", "Select an option:",
+                           choices = NULL)
+            )
+         server <- function(input, output, session) {
+            observeEvent(input$updateChoices, {
+               if (input$updateChoices) {
+                  choices <- c("Option A", "Option B", "Option C")
+               } else {
+                  choices <- NULL
+               }
+               updateSelectInput(session, "dynamicSelect",
+               choices = choices)
+            })
+         }
+
+         shinyApp(ui, server)
+
+    ```
+
+23. ### How would you use the `validate()` function in R Shiny to perform input validation and display custom error messages?
+
+    The `validate()` function in Shiny is used for input validation. It halts the reactive computation and displays custom error messages if the validation condition is not met.
+
+    Here's an example validating a numeric input and displaying a custom error message:
+
+    ```R
+      library(shiny)
+         ui <- fluidPage(
+               numericInput("number", "Enter a number:", value = 5, min = 1, max = 10),
+               verbatimTextOutput("result")
+            )
+         server <- function(input, output) {
+               output$result <- renderPrint({
+                  validate(
+                  need(input$number > 3, "Number must be greater than 3."),
+                  need(input$number < 8, "Number must be less than 8.")
+               )
+               print("Valid number!")
+            })
+         }
+
+      shinyApp(ui, server)
+    ```
+
+24. ### Explain how to use the `updateModal()` function in R Shiny to dynamically update and control modal dialog boxes.
+
+    The `updateModal()` function in Shiny allows you to dynamically update the content and properties of a modal dialog box.
+
+    Here's an example that demonstrates how to open a modal dialog and update its content dynamically:
+
+    ```R
+    library(shiny)
+      ui <- fluidPage(
+         actionButton("openModal", "Open Modal")
+      )
+
+      server <- function(input, output, session) {
+            observeEvent(input$openModal, {
+            showModal(modalDialog(
+               title = "Dynamic Modal",
+               "This is the initial content.",
+               footer = modalButton("Close")
+            ))
+         })
+      shinyApp(ui, server)
+    ```
 
 ## Contributing
 
