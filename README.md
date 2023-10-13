@@ -1,4 +1,4 @@
-#### Working... I will add the questions with answers regularly.
+#### Working...
 
 # RShiny Interview Questions and Answers
 
